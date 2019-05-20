@@ -7,19 +7,28 @@ a {
     text-decoration: none;
 }
 
+body {
+    background: grey url("./wall.jpg") center center no-repeat;
+    background-size: cover;
+}
+
 main {
     text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #mainWrapper {
     display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px 20px;
 }
 
 kbd {
     display: inline-block;
-    border: 1px solid red;
-    height: 4em;
-    width: 4em;
     text-transform: uppercase;
     position: relative;
 }
@@ -33,4 +42,41 @@ kbd>button {
     right: 0;
     bottom: 0;
     display: none;
+    border-radius: 2px;
+}
+
+.key {
+    height: 69px;
+    width: 71px;
+    background: linear-gradient(to bottom, #292929 0%, #111111 100%);
+    border: 1px solid #373737;
+    border-radius: 8px;
+    color: #c5c5c5;
+    box-shadow: 0 0 0 1px #1a1b1c, 0 0 0 2px #1f2020, 0 3px 0 2px #080808;
+    font-size: 18px;
+    font-family: keyboard,
+        "Arial Rounded",
+        Helvetica,
+        Arial,
+        sans-serif;
+    margin: 0 10px;
+    position: relative;
+}
+
+.key>.text {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.key>img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+}
+
+.row {
+    margin: 20px 0;
 }
